@@ -176,7 +176,11 @@ useEffect(() => {
       let cotizacionNo = userDB.CotizacionTerrestre ? `${userDB.CotizacionTerrestre + 1 < 10 ? '00' : ''}${userDB.CotizacionTerrestre + 1 > 9 && userDB.CotizacionTerrestre + 1 < 100 ? '0' : ''}${userDB.CotizacionTerrestre + 1}/${new Date().getFullYear().toString().substring(2, 4)}` : `001/${new Date().getFullYear().toString().substring(2, 4)}`
       let date = getDayMonthYear()
       
-      setUserPdfData({...pdfData, cotizacionNo, date,})
+      setUserPdfData({
+...pdfData, 
+["COTIZACIÓN No"]: cotizacionNo, 
+["FECHA"]: date
+})
 
     }, []);
 
