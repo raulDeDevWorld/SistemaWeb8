@@ -178,8 +178,8 @@ useEffect(() => {
       
       setUserPdfData({
 ...pdfData, 
-["COTIZACIÓN No"]: cotizacionNo, 
-["FECHA"]: date
+["CT-COTIZACIÓN No"]: cotizacionNo, 
+["CT-FECHA"]: date
 })
 
     }, []);
@@ -206,11 +206,11 @@ useEffect(() => {
                         <div className={style.firstItems}>
                             <div>
                                 <label htmlFor="">COTIZACIÓN No</label>
-                                <input type="text" name={"COTIZACIÓN No"} onChange={handleEventChange} defaultValue={pdfData["COTIZACIÓN No"] && pdfData["COTIZACIÓN No"]} />
+                                <input type="text" name={"COTIZACIÓN No"} onChange={handleEventChange} defaultValue={pdfData["CT-COTIZACIÓN No"] && pdfData["CT-COTIZACIÓN No"]} />
                             </div>
                             <div>
                                 <label htmlFor="">FECHA</label>
-                                <input type="text" name={"FECHA"} onChange={handleEventChange} defaultValue={pdfData["FECHA"] && pdfData["FECHA"]} />
+                                <input type="text" name={"FECHA"} onChange={handleEventChange} defaultValue={pdfData["CT-FECHA"] && pdfData["CT-FECHA"]} />
                             </div>
                             <div>
                                 <label htmlFor="">VALIDEZ</label>
