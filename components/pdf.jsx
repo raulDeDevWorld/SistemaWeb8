@@ -126,15 +126,15 @@ const PDFView = () => {
                             <View style={styles.introItems}>
                                 <View style={styles.introViewKeyValue}>
                                     <Text style={styles.key}>COTIZACIÓN No</Text>
-                                    <Text style={styles.value}>{pdfData && pdfData["COTIZACIÓN No"] && pdfData["COTIZACIÓN No"]}</Text>
+                                    <Text style={styles.value}>{pdfData && pdfData["CT-COTIZACIÓN No"] && pdfData["CT-COTIZACIÓN No"]}</Text>
                                 </View>
                                 <View style={styles.introViewKeyValue}>
                                     <Text style={styles.key}>FECHA</Text>
-                                    <Text style={styles.value}>{pdfData && pdfData["FECHA"] && pdfData["FECHA"]}</Text>
+                                    <Text style={styles.value}>{pdfData && pdfData["CT-FECHA"] && pdfData["CT-FECHA"]}</Text>
                                 </View>
                                 <View style={styles.introViewKeyValue}>
                                     <Text style={styles.key}>VALIDEZ</Text>
-                                    <Text style={styles.value}>{pdfData && pdfData["VALIDEZ"] && pdfData["VALIDEZ"]}</Text>
+                                    <Text style={styles.value}>{pdfData && pdfData["CT-VALIDEZ"] && pdfData["CT-VALIDEZ"]}</Text>
                                 </View>
                             </View>
                         </View>
