@@ -206,11 +206,11 @@ useEffect(() => {
                         <div className={style.firstItems}>
                             <div>
                                 <label htmlFor="">COTIZACIÓN No</label>
-                                <input type="text" name={"COTIZACIÓN No"} onChange={handleEventChange} defaultValue={pdfData.cotizacionNo && pdfData.cotizacionNo} />
+                                <input type="text" name={"COTIZACIÓN No"} onChange={handleEventChange} defaultValue={pdfData["COTIZACIÓN No"] && pdfData["COTIZACIÓN No"]} />
                             </div>
                             <div>
                                 <label htmlFor="">FECHA</label>
-                                <input type="text" name={"FECHA"} onChange={handleEventChange} defaultValue={pdfData.date && pdfData.date} />
+                                <input type="text" name={"FECHA"} onChange={handleEventChange} defaultValue={pdfData["FECHA"] && pdfData["FECHA"]} />
                             </div>
                             <div>
                                 <label htmlFor="">VALIDEZ</label>
