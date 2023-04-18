@@ -165,6 +165,25 @@ function CotizacionTerrestre() {
         console.log(f)
     }
     console.log(pdfData)
+
+
+
+
+
+
+
+useEffect(() => {
+      let cotizacionNo = userDB.CotizacionTerrestre ? `${userDB.CotizacionTerrestre + 1 < 10 ? '00' : ''}${userDB.CotizacionTerrestre + 1 > 9 && userDB.CotizacionTerrestre + 1 < 100 ? '0' : ''}${userDB.CotizacionTerrestre + 1}/${new Date().getFullYear().toString().substring(2, 4)}` : `001/${new Date().getFullYear().toString().substring(2, 4)}`
+      let date = getDayMonthYear()
+      
+      setUserPdfData({...pdfData, cotizacionNo, date,})
+
+    }, []);
+
+
+
+
+
     return (
         <Layout>
             {userDB && <div className={style.container}>
@@ -183,11 +202,11 @@ function CotizacionTerrestre() {
                         <div className={style.firstItems}>
                             <div>
                                 <label htmlFor="">COTIZACIÓN No</label>
-                                <input type="text" name={"COTIZACIÓN No"} onChange={handleEventChange} defaultValue={userDB.CotizacionTerrestre ? `${userDB.CotizacionTerrestre + 1 < 10 ? '00' : ''}${userDB.CotizacionTerrestre + 1 > 9 && userDB.CotizacionTerrestre + 1 < 100 ? '0' : ''}${userDB.CotizacionTerrestre + 1}/${new Date().getFullYear().toString().substring(2, 4)}` : `001/${new Date().getFullYear().toString().substring(2, 4)}`} />
+                                <input type="text" name={"COTIZACIÓN No"} onChange={handleEventChange} defaultValue={pdfData.cotizacionNo && pdfData.cotizacionNo} />
                             </div>
                             <div>
                                 <label htmlFor="">FECHA</label>
-                                <input type="text" name={"FECHA"} onChange={handleEventChange} defaultValue={getDayMonthYear()} />
+                                <input type="text" name={"FECHA"} onChange={handleEventChange} defaultValue={pdfData.date && pdfData.date} />
                             </div>
                             <div>
                                 <label htmlFor="">VALIDEZ</label>
